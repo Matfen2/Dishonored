@@ -1,0 +1,179 @@
+[
+  {
+    "id": "1",
+    "present": "/picts/dishonored1/main/dishonoredDefinitiveEditionWallpaper.png",
+    "mobile": "/picts/dishonored1/main/dishonoredDefinitiveEditionWallpaperMobile.png",
+    "title": "/picts/dishonored1/main/dishonoredDefinitiveEditionLogo.png",
+    "pitch": "La vengeance est le remède à tous les maux",
+    "trailer": "https://www.youtube.com/watch?v=OwFJEJw7jSI",
+    "gameplay": "https://www.youtube.com/watch?v=7T77fKNMHEU&list=PLF2DC671C31193181&index=35",
+    "jacket": {
+      "imgJacket": [
+        "/picts/dishonored1/info/jacket/dishonoredJacketFirst.png",
+        "/picts/dishonored1/info/jacket/dishonoredJacketSecond.png",
+        "/picts/dishonored1/info/jacket/dishonoredJacketThird.png"
+      ],
+      "pitchJacket": [
+        "LA LAME DE DUNWALL",
+        "LES SORCIERES DE BRIGMORE",
+        "DUNWALL CITY TRIALS"
+      ],
+      "sentenceJacket": [
+        "Incarnez Daud, l’assassin légendaire de l’impératrice et partez en quête de rédemption.",
+        "Incarnez Daud et affrontez le cercle des sorcières de Brigmore. Opterez-vous pour la rédemption ou la damnation ?",
+        "Mettez à l’épreuve votre furtivité, votre capacité au combat et votre agilité dans 10 cartes de défi différentes."
+      ]
+    },
+    "abilities": {
+      "void": "/picts/dishonored1/info/powers/dishonoredTheVoid.png",
+      "characters": [
+        "/picts/dishonored1/info/powers/dishonoredCorvo.png"
+      ],
+      "powers": [
+        "/picts/dishonored1/info/powers/blink.png",
+        "/picts/dishonored1/info/powers/darkVision.png",
+        "/picts/dishonored1/info/powers/bendtime.png",
+        "/picts/dishonored1/info/powers/devouringSwarm.png",
+        "/picts/dishonored1/info/powers/possession.png",
+        "/picts/dishonored1/info/powers/shockwave.png"
+      ]
+    },
+    "wallpaper": [
+      "/picts/dishonored1/info/media/dishonoredFirstPict.png",
+      "/picts/dishonored1/info/media/dishonoredSecondPict.png",
+      "/picts/dishonored1/info/media/dishonoredThirdPict.png",
+      "/picts/dishonored1/info/media/dishonoredFourPict.png",
+      "/picts/dishonored1/info/media/dishonoredFivePict.png",
+      "/picts/dishonored1/info/media/dishonoredSixPict.png"
+    ],
+    "buy": {
+      "background": "/picts/dishonored1/info/buy/dishonoredBuyWallpaper.png",
+      "jacket": "/picts/dishonored1/info/buy/dishonoredJacket.png",
+      "description": "Incarnez un assassin aux pouvoirs surnaturels poussé par un désir de vengeance. Éliminez vos cibles grâce à un système de combat dynamique permettant de combiner les innombrables pouvoirs surnaturels, armes et gadgets à votre disposition. Traquez vos ennemis à la faveur de l'obscurité ou foncez tête baissée, l'arme au poing. Définissez votre style de jeu et élaborez votre vengeance. Vos choix façonneront votre expérience.",
+      "hrefBuy": {
+        "playstation": "https://store.playstation.com/fr-lu/product/EP1003-CUSA02231_00-DISHONOREDGAMEEU",
+        "xbox": "https://www.xbox.com/fr-FR/games/store/dishonored-definitive-edition/C299QVC2BSJF",
+        "steam": "https://store.steampowered.com/sub/31292/"
+      }
+    }
+  },
+  {
+    "id": "2",
+    "present": "/picts/dishonored2/main/dishonored2Wallpaper.jpg",
+    "mobile": "/picts/dishonored2/main/dishonored2WallpaperMobile.png",
+    "title": "/picts/dishonored2/main/dishonored2Logo.png",
+    "pitch": "Reprends ce qui t'appartient",
+    "trailer": "https://www.youtube.com/watch?v=aTzTYSZETWc&list=PLF2DC671C31193181&index=27",
+    "gameplay": "https://www.youtube.com/watch?v=VzUvm1Uhozw&list=PLF2DC671C31193181&index=21",
+    "jacket": {
+      "imgJacket": [
+        "/picts/dishonored2/info/jacket/dishonored2JacketFirst.png",
+        "/picts/dishonored2/info/jacket/dishonored2JacketSecond.png",
+        "/picts/dishonored2/info/jacket/dishonored2JacketThird.png"
+      ],
+      "pitchJacket": [
+        "CHOISISSEZ VOTRE ASSASSIN",
+        "DES POUVOIRS SURNATURELS",
+        "UN MONDE FANTASTIQUE"
+      ],
+      "sentenceJacket": [
+        "Incarnez Emily ou Corvo et tirez profit des pouvoirs uniques, armes et gadgets de votre personnage pour explorer le monde.",
+        "Devenez une ombre qui traque ses proies, liez les ennemis pour leur faire subir le même sort, capturez vos cibles pour contrôler leur esprit et bien plus.",
+        "Contemplez des environnements uniques, depuis les rues infestées de rats de Dunwall jusqu’à la côte exotique de Karnaca."
+      ]
+    },
+    "abilities": {
+      "void": "/picts/dishonored2/info/powers/dishonored2TheVoid.png",
+      "characters": [
+        "/picts/dishonored2/info/powers/dishonored2EmilyKaldwin.png",
+        "/picts/dishonored2/info/powers/dishonored2Corvo.png"
+      ],
+      "powers": [
+        "/picts/dishonored2/info/powers/blink.png",
+        "/picts/dishonored2/info/powers/darkVision.png",
+        "/picts/dishonored2/info/powers/bendtime.png",
+        "/picts/dishonored2/info/powers/devouringSwarm.png",
+        "/picts/dishonored2/info/powers/possession.png",
+        "/picts/dishonored2/info/powers/shockwave.png",
+        "/picts/dishonored2/info/powers/domino.png",
+        "/picts/dishonored2/info/powers/doppelg.png",
+        "/picts/dishonored2/info/powers/shadowWalk.png",
+        "/picts/dishonored2/info/powers/farReach.png",
+        "/picts/dishonored2/info/powers/mesmerize.png"
+      ]
+    },
+    "wallpaper": [
+      "/picts/dishonored2/info/media/dishonored2FirstPict.png",
+      "/picts/dishonored2/info/media/dishonored2SecondPict.png",
+      "/picts/dishonored2/info/media/dishonored2ThirdPict.png",
+      "/picts/dishonored2/info/media/dishonored2FourPict.png",
+      "/picts/dishonored2/info/media/dishonored2FivePict.png",
+      "/picts/dishonored2/info/media/dishonored2SixPict.png"
+    ],
+    "buy": {
+      "background": "/picts/dishonored2/info/buy/dishonored2BuyWallpaper.png",
+      "jacket": "/picts/dishonored2/info/buy/dishonored2Jacket.png",
+      "description": "Trouvez votre place dans un monde où mysticisme et industrie s'affrontent. Choisirez-vous d'incarner l'Impératrice Emily Kaldwin ou le Protecteur royal, Corvo Attano ? Allez-vous progresser dans le jeu sans être vu ou mettre à profit son système de combat dévastateur ? Peut-être opterez-vous pour une combinaison des deux ?",
+      "hrefBuy": {
+        "playstation": "https://store.playstation.com/fr-lu/product/EP1003-CUSA02231_00-DISHONOREDGAMEEU",
+        "xbox": "https://www.xbox.com/fr-FR/games/store/dishonored-definitive-edition/C299QVC2BSJF",
+        "steam": "https://store.steampowered.com/sub/31292/"
+      }
+    }
+  },
+  {
+    "id": "3",
+    "present": "/picts/dishonoredDeathOfOutsider/main/dishonoredDeathOfOutsiderWallpaper.jpg",
+    "mobile": "/picts/dishonoredDeathOfOutsider/main/dishonoredDeathOfOutsiderWallpaperMobile.png",
+    "title": "/picts/dishonoredDeathOfOutsider/main/dishonoredDeathOfOutsiderLogo.png",
+    "pitch": "Tuer l'Outsider",
+    "trailer": "https://www.youtube.com/watch?v=B_Hq3AFeu-s&list=PLF2DC671C31193181&index=8",
+    "gameplay": "https://www.youtube.com/watch?v=kg57ryQ_GT0&list=PLF2DC671C31193181&index=5",
+    "jacket": {
+      "imgJacket": [
+        "/picts/dishonoredDeathOfOutsider/info/jacket/dishonoredDeathOfOutsiderJacketFirst.png",
+        "/picts/dishonoredDeathOfOutsider/info/jacket/dishonoredDeathOfOutsiderJacketSecond.png",
+        "/picts/dishonoredDeathOfOutsider/info/jacket/dishonoredDeathOfOutsiderJacketThird.png"
+      ],
+      "pitchJacket": [
+        "ARMES ET POUVOIRS INÉDITS",
+        "DES MISSIONS UNIQUES",
+        "DES ENNEMIS REDOUTABLES"
+      ],
+      "sentenceJacket": [
+        "Utilisez votre ensemble unique de pouvoirs destructeurs de gadgets et d’armes pour éliminer chaque cible.",
+        "Infiltrez des clubs de combat clandestins, des cultes de magie noire et participez à un intense braquage de banque.",
+        "Éliminez de dangereux ennemis tels que l’immortel Visionnaire, les sœurs de l’ordre occulte et les nouveaux soldats mécaniques."
+      ]
+    },
+    "abilities": {
+      "void": "/picts/dishonoredDeathOfOutsider/info/powers/dishonoredDeathOfOutsiderTheVoid.png",
+      "characters": [
+        "/picts/dishonoredDeathOfOutsider/info/powers/dishonoredDeathOfOutsiderBillie.png"
+      ],
+      "powers": [
+        "/picts/dishonoredDeathOfOutsider/info/powers/displace.png",
+        "/picts/dishonoredDeathOfOutsider/info/powers/foresight.png",
+        "/picts/dishonoredDeathOfOutsider/info/powers/semblance.png"
+      ]
+    },
+    "wallpaper": [
+      "/picts/dishonoredDeathOfOutsider/info/media/dishonoredDeathOfOutsiderFirstPict.png",
+      "/picts/dishonoredDeathOfOutsider/info/media/dishonoredDeathOfOutsiderSecondPict.png",
+      "/picts/dishonoredDeathOfOutsider/info/media/dishonoredDeathOfOutsiderThirdPict.png",
+      "/picts/dishonoredDeathOfOutsider/info/media/dishonoredDeathOfOutsiderFourPict.png",
+      "/picts/dishonoredDeathOfOutsider/info/media/dishonoredDeathOfOutsiderFivePict.png",
+      "/picts/dishonoredDeathOfOutsider/info/media/dishonoredDeathOfOutsiderSixPict.png"
+    ],
+    "buy": {
+      "background": "/picts/dishonoredDeathOfOutsider/info/buy/dishonoredDeathOfOutsiderBuyWallpaper.png",
+      "jacket": "/picts/dishonoredDeathOfOutsider/info/buy/dishonoredDeathOfOutsiderJacket.png",
+      "description": "Devenez un assassin surnaturel en incarnant la célèbre Billie Lurk. Retrouvez votre mentor Daud et préparez ensemble le plus grand assassinat de tous les temps. Dishonored® : La mort de l'Outsider reprend tous les codes de la série Dishonored, notamment le système de combat fluide, une conception de niveaux exceptionnelle et un scénario évoluant suivant vos choix.",
+      "hrefBuy": {
+        "playstation": "https://store.playstation.com/fr-lu/product/EP1003-CUSA02231_00-DISHONOREDGAMEEU",
+        "xbox": "https://www.xbox.com/fr-FR/games/store/dishonored-definitive-edition/C299QVC2BSJF",
+        "steam": "https://store.steampowered.com/sub/31292/"
+      }
+    }
+  }
+]
