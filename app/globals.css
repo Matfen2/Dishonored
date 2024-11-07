@@ -19,3 +19,8 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.btn-hover-shadow:hover {
+  box-shadow: 0px 2px 6px 5px #FFFFFF;
+}
+

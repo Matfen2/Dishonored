@@ -6,6 +6,8 @@
     "title": "/picts/dishonored1/main/dishonoredDefinitiveEditionLogo.png",
     "pitch": "La vengeance est le remède à tous les maux",
     "trailer": "https://www.youtube.com/watch?v=OwFJEJw7jSI",
+    "imgGame": "/picts/dishonored1/info/dishonoredPresent.jpg",
+    "imgGameMobile": "/picts/dishonored1/info/dishonoredPresentMobile.png",
     "gameplay": "https://www.youtube.com/watch?v=7T77fKNMHEU&list=PLF2DC671C31193181&index=35",
     "jacket": {
       "imgJacket": [
@@ -64,6 +66,8 @@
     "title": "/picts/dishonored2/main/dishonored2Logo.png",
     "pitch": "Reprends ce qui t'appartient",
     "trailer": "https://www.youtube.com/watch?v=aTzTYSZETWc&list=PLF2DC671C31193181&index=27",
+    "imgGame": "/picts/dishonored2/info/dishonored2Present.png",
+    "imgGameMobile": "/picts/dishonored2/info/dishonored2PresentMobile.png",
     "gameplay": "https://www.youtube.com/watch?v=VzUvm1Uhozw&list=PLF2DC671C31193181&index=21",
     "jacket": {
       "imgJacket": [
@@ -128,6 +132,8 @@
     "title": "/picts/dishonoredDeathOfOutsider/main/dishonoredDeathOfOutsiderLogo.png",
     "pitch": "Tuer l'Outsider",
     "trailer": "https://www.youtube.com/watch?v=B_Hq3AFeu-s&list=PLF2DC671C31193181&index=8",
+    "imgGame": "/picts/dishonoredDeathOfOutsider/info/dishonoredDeathOfOutsiderPresent.png",
+    "imgGameMobile": "/picts/dishonoredDeathOfOutsider/info/dishonoredDeathOfOutsiderPresentMobile.png",
     "gameplay": "https://www.youtube.com/watch?v=kg57ryQ_GT0&list=PLF2DC671C31193181&index=5",
     "jacket": {
       "imgJacket": [
