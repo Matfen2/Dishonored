@@ -86,26 +86,6 @@
         "Contemplez des environnements uniques, depuis les rues infestées de rats de Dunwall jusqu’à la côte exotique de Karnaca."
       ]
     },
-    "abilities": {
-      "void": "/picts/dishonored2/info/powers/dishonored2TheVoid.png",
-      "characters": [
-        "/picts/dishonored2/info/powers/dishonored2EmilyKaldwin.png",
-        "/picts/dishonored2/info/powers/dishonored2Corvo.png"
-      ],
-      "powers": [
-        "/picts/dishonored2/info/powers/blink.png",
-        "/picts/dishonored2/info/powers/darkVision.png",
-        "/picts/dishonored2/info/powers/bendtime.png",
-        "/picts/dishonored2/info/powers/devouringSwarm.png",
-        "/picts/dishonored2/info/powers/possession.png",
-        "/picts/dishonored2/info/powers/shockwave.png",
-        "/picts/dishonored2/info/powers/domino.png",
-        "/picts/dishonored2/info/powers/doppelg.png",
-        "/picts/dishonored2/info/powers/shadowWalk.png",
-        "/picts/dishonored2/info/powers/farReach.png",
-        "/picts/dishonored2/info/powers/mesmerize.png"
-      ]
-    },
     "wallpaper": [
       "/picts/dishonored2/info/media/dishonored2FirstPict.png",
       "/picts/dishonored2/info/media/dishonored2SecondPict.png",

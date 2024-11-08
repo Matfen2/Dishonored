@@ -1,25 +1,27 @@
-"use client"; // Indique que ce composant doit être rendu côté client
+"use client";
 
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination, Thumbs } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/thumbs";
 import games from "@/app/data/games.json";
 
 const GamePage = () => {
   const { id } = useParams();
   const game = games.find((game) => game.id === id);
+  const [selectedImage, setSelectedImage] = useState(game.wallpaper[0]);
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-  // Définissez une valeur par défaut pour l'image sélectionnée
-  const defaultImage = game && game.wallpaper ? game.wallpaper[0] : "";
-  const [selectedImage, setSelectedImage] = useState(defaultImage);
-  const [showFirstSet, setShowFirstSet] = useState(true);
-
-  const handleToggleImages = () => {
-    setShowFirstSet(!showFirstSet);
+  const handleImageChange = (image) => {
+    setSelectedImage(image);
   };
 
-  // Ajoutez cette vérification après l'initialisation des hooks
   if (!game) {
     return <div>Jeu non trouvé</div>;
   }
@@ -29,136 +31,132 @@ const GamePage = () => {
       {/* Section PRESENT */}
       <div className="w-full h-screen bg-cover bg-center relative" style={{ backgroundImage: `url(${game.imgGame})` }}>
         <Link href="/">
-          <div className="fixed top-4 left-0 z-20" style={{ marginLeft: "-100px", marginTop: "-40px" }}>
-            <Image src="/picts/dishonoredLogo.png" alt="logoDishonored" width={320} height={120} />
-          </div>
-        </Link>
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-4">
-          <button className="px-4 py-2 border border-white text-white rounded-md hover:bg-white hover:text-black transition">
-            <a href={game.gameplay} target="_blank" rel="noopener noreferrer">
-              GAMEPLAY
-            </a>
-          </button>
-          <button className="px-4 py-2 border border-white text-white rounded-md hover:bg-white hover:text-black transition">
-            <a href="#buy">ACHETER</a>
-          </button>
+        <div className="fixed top-4 left-0 z-20" style={{ marginLeft: "-100px", marginTop: "-40px" }}>
+          <Image src="/picts/dishonoredLogo.png" alt="logoDishonored" width={320} height={120} />
+        </div>
+      </Link>
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-4 text-center">
+          <a href={game.gameplay} target="_blank" rel="noopener noreferrer"  className="px-4 py-2 border border-white bg-white text-black text-sm rounded-md transition-transform duration-200 hover:scale-105">
+            GAMEPLAY
+          </a>
+          <a href="#buy" className="px-4 py-2 border border-white bg-white text-black text-sm rounded-md transition-transform duration-200 hover:scale-105">
+            ACHETER
+          </a>
         </div>
       </div>
 
       {/* Section JACKET */}
-      <div className="bg-black p-10 grid grid-cols-3 gap-4 text-white">
+      <div className="bg-black p-6 md:p-10 grid grid-cols-1 md:grid-cols-3 gap-4 text-white">
         {game.jacket.imgJacket.map((img, index) => (
-          <div key={index} className="text-center">
-            <Image src={img} alt={`jacket ${index}`} width={400} height={200} className="d-block m-auto rounded-2xl" />
-            <h3 className="text-lg font-semibold mt-4">{game.jacket.pitchJacket[index]}</h3>
-            <p className="text-1xl mt-2">{game.jacket.sentenceJacket[index]}</p>
+          <div key={index} className="text-center px-4 md: py-4">
+            <Image src={img} alt={`jacket ${index}`} width={500} height={200} className="mx-auto rounded-2xl w-full" />
+            <h3 className="text-lg font-semibold mt-4 mb-2 md:mb-1" id="pitchJacket">{game.jacket.pitchJacket[index]}</h3>
+            <p className="text-sm md:max-w-xs mx-auto leading-relaxed" id="sentenceJacket">{game.jacket.sentenceJacket[index]}</p>
           </div>
         ))}
       </div>
 
-      {/* Section POWERS */}
-      <div 
-        className="bg-gray-800 p-10 text-white flex flex-col items-center relative" 
-        style={{ backgroundImage: `url(${game.abilities.void})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-      >
-        <div className="absolute inset-0 bg-black opacity-40"></div>
-
-        <div className="grid grid-cols-4 gap-6 relative z-10">
-          {/* Image du personnage à gauche */ }
-          <div className="col-span-1 flex justify-center items-center">
-            <Image src={game.abilities.characters[0]} alt="Character" width={140} height={100} className="rounded-md" />
-          </div>
-
-          {/* Icônes des pouvoirs */}
-          <div className="col-span-3 grid grid-cols-3 gap-4">
-            {game.abilities.powers.map((power, index) => (
-              <div key={index} className="flex justify-center items-center">
-                <Image src={power} alt={`Power ${index}`} width={120} height={100} className="rounded-full" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* Section GAMEPLAY */}
-      <div className="flex justify-center items-center bg-black py-10">
-        <div className="grid grid-cols-5 gap-4">
-          {/* Image principale */}
-          <div className="col-span-4 flex justify-center">
-            <Image 
-              src={selectedImage} 
-              alt="Selected Wallpaper" 
-              width={1200} 
-              height={40} 
-              className="rounded-lg"
-            />
-          </div>
-
-          {/* Galerie des miniatures avec flèches en haut et en bas */}
-          <div className="col-span-1 flex flex-col items-center space-y-4 relative mt-4">
-            {/* Flèche du haut */}
-            <button 
-              onClick={handleToggleImages} 
-              className="text-white text-3xl focus:outline-none mb-2"
-              style={{ visibility: showFirstSet ? 'hidden' : 'visible' }} 
-            >
-              <i className="fa-solid fa-chevron-up"></i>
-            </button>
-
-            {/* Miniatures d'images */}
-            {(showFirstSet ? game.wallpaper.slice(0, 3) : game.wallpaper.slice(3, 6)).map((image, index) => (
-              <div 
-                key={index} 
-                onClick={() => setSelectedImage(image)} 
-                className="cursor-pointer"
-                style={{ opacity: selectedImage === image ? '1.0' : '0.5' }} 
-              >
-                <Image 
-                  src={image} 
-                  alt={`Thumbnail ${index}`} 
-                  width={300} 
-                  height={104} 
-                  className="rounded-lg"
-                />
-              </div>
-            ))}
-
-            {/* Flèche du bas */}
-            <button 
-              onClick={handleToggleImages} 
-              className="text-white text-3xl focus:outline-none mt-2"
-              style={{ visibility: showFirstSet ? 'visible' : 'hidden' }} 
-            >
-              <i className="fa-solid fa-chevron-down"></i>
-            </button>
-          </div>
-        </div>
+      <div className="bg-black py-6 md:py-10 px-4 -mt-8">
+      {/* Image principale */}
+      <div className="flex justify-center mb-4">
+        <Image 
+          src={selectedImage} 
+          alt="Selected Wallpaper" 
+          width={800} 
+          height={600} 
+          id="mainGameplay"
+          className="rounded-lg w-full"
+          style={{maxWidth: '900px'}}
+        />
       </div>
+
+      {/* Swiper pour les miniatures avec navigation */}
+      <Swiper
+        spaceBetween={20}
+        slidesPerView={3} 
+        navigation={true} 
+        modules={[Navigation]}
+        className="max-w-4xl mx-auto"
+        breakpoints={{
+          768: {
+            slidesPerView: 3,
+          },
+          1024: {
+            slidesPerView: 5,
+          },
+          1440: {
+            slidesPerView: 6,
+          },
+        }}
+      >
+        {game.wallpaper.map((image, index) => (
+          <SwiperSlide key={index}>
+            <div
+              onClick={() => setSelectedImage(image)}
+              className="cursor-pointer"
+              style={{ opacity: selectedImage === image ? "1.0" : "0.5" }}
+            >
+              <Image 
+                src={image} 
+                alt={`Thumbnail ${index}`} 
+                width={300} 
+                height={150} 
+                className="rounded-lg w-full transition-transform duration-200 hover:scale-105"
+              />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
 
       {/* Section BUY */}
-      <div 
-        className="bg-gray-800 p-10 text-white flex flex-col items-center relative" id='buy' 
-        style={{ backgroundImage: `url(${game.buy.background})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+      <div
+        className="bg-gray-800 p-6 md:p-8 lg:p-10 text-white flex flex-col md:flex-row items-center relative"
+        id="buy"
+        style={{
+          backgroundImage: `url(${game.buy.background})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
       >
-        <div className="absolute inset-0 bg-black opacity-40"></div>
+        {/* Overlay pour obscurcir l'arrière-plan */}
+        <div className="absolute inset-0 bg-black opacity-60"></div>
 
-        <div className='z-20 flex flex-row items-center space-x-6'>
-          <Image src={game.buy.jacket} alt="Buy Jacket" width={250} height={400} className="rounded-lg" />
-          
-          <div className="flex flex-col max-w-2xl">
-            <p className="text-xl">{game.buy.description}</p>
-            <div className="mt-6 flex space-x-4">
+        <div className="relative z-10 flex flex-col justify-center md:flex-row items-center space-x-0 md:space-x-6 lg:space-x-8 w-full">
+          {/* Image du jeu */}
+          <Image
+            src={game.buy.jacket}
+            alt="Buy Jacket"
+            width={200}
+            height={300}
+            id="jacket"
+            className="rounded-lg w-full md:w-[400px] lg:w-[250px] mb-4 md:mb-0"
+          />
+
+          {/* Description et Boutons */}
+          <div className="flex flex-col max-w-2xl text-center md:text-left px-4 md:px-0">
+            <p className="text-base md:text-lg lg:text-xl -mb-2 md:mb-0">
+              {game.buy.description}
+            </p>
+            <div className="mt-4 flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 justify-center md:justify-start">
               <a href={game.buy.hrefBuy.playstation} target="_blank" rel="noopener noreferrer">
-                <button className="px-4 py-2 bg-blue-600 text-white rounded-md"><i className="fa-brands fa-playstation" style={{marginRight: '10px'}}></i>PLAYSTATION</button>
+                <button className="px-4 py-2 text-white rounded-md md: mt-2 transition-transform duration-200 hover:scale-105" id="btnPlaystation">
+                  <i className="fa-brands fa-playstation mr-2"></i>PLAYSTATION
+                </button>
               </a>
               <a href={game.buy.hrefBuy.xbox} target="_blank" rel="noopener noreferrer">
-                <button className="px-4 py-2 bg-green-600 text-white rounded-md"><i className="fa-brands fa-xbox" style={{marginRight: '10px'}}></i>XBOX ONE</button>
+                <button className="px-4 py-2 text-white rounded-md md: mt-2 transition-transform duration-200 hover:scale-105" id="btnXbox">
+                  <i className="fa-brands fa-xbox mr-2"></i>XBOX
+                </button>
               </a>
               <a href={game.buy.hrefBuy.steam} target="_blank" rel="noopener noreferrer">
-                <button className="px-4 py-2 bg-gray-700 text-white rounded-md"><i className="fa-brands fa-steam-symbol" style={{marginRight: '10px'}}></i>STEAM</button>
+                <button className="px-4 py-2 text-white rounded-md md: mt-2 transition-transform duration-200 hover:scale-105" id="btnSteam">
+                  <i className="fa-brands fa-steam-symbol mr-2"></i>STEAM
+                </button>
               </a>
             </div>
-          </div>  
+          </div>
         </div>
       </div>
     </div>

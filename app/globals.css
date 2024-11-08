@@ -20,7 +20,103 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.btn-hover-shadow:hover {
-  box-shadow: 0px 2px 6px 5px #FFFFFF;
+
+/* GAME */
+@media screen and (max-width: 768px) {
+  #logoOutsider {
+    height: 140px;
+    width: 250px;
+    margin-left: 20px;
+  }
 }
+
+#btnPlaystation {
+  background-color: darkblue;
+}
+
+#btnXbox {
+  background-color: darkgreen;
+}
+
+#btnSteam {
+  background-color: rgb(81, 81, 81);
+}
+
+@media screen and (max-width: 767px) {
+  #mainWallpaper {
+    margin-bottom: -40px;
+    width: 100%;
+  }
+
+  #subWallpaper {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  #imgJacket {
+    width: 500px;
+  }
+
+  #jacket {
+    height: 400px;
+    max-width: 350px;
+  }
+
+  #btnPlaystation {
+    font-size: 0.7em;
+  }
+
+  #btnXbox {
+    font-size: 0.7em;
+  }
+
+  #btnSteam {
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #mainGameplay {
+    height: 400px;
+  }
+
+  #logoTitle {
+    height: 100px;
+    max-width: 500px;
+  }  
+
+  #btnGame {
+    margin-top: 2px;
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #pitchJacket {
+    font-size: 0.9em;
+  }
+
+  #sentenceJacket {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #mainWallpaper {
+    margin-bottom: -40px;
+    width: 100%;
+  }
+
+  #subWallpaper {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 341px) {
+  #btnGame {
+    font-size: 0.6em;
+  }
+}
+
 

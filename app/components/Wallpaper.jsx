@@ -1,17 +1,26 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import Image from 'next/image';
 import 'swiper/css';
-import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import games from '@/app/data/games.json';
 import Link from 'next/link';
 
 const Wallpaper = () => {
   const router = useRouter();
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Détecte si l'utilisateur est sur un petit écran
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize(); // Définir la valeur initiale
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleGameClick = (id) => {
     router.push(`/game/${id}`);
@@ -35,9 +44,10 @@ const Wallpaper = () => {
         }}
         pagination={{
           clickable: true,
+          bulletClass: 'swiper-pagination-bullet', // Class de pagination pour personnalisation
+          bulletActiveClass: 'swiper-pagination-bullet-active', // Class active pour pagination
         }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
+        modules={[Autoplay, Pagination]}
         className="mySwiper"
       >
         {games.map((game) => (
@@ -45,27 +55,22 @@ const Wallpaper = () => {
             <div
               className="relative w-full h-screen bg-cover bg-center flex items-center justify-center"
               style={{
-                backgroundImage: `url(${window.innerWidth < 768 ? game.mobile : game.present})`,
+                backgroundImage: `url(${isMobile ? game.mobile : game.present})`,
               }}
             >
-              <div className="absolute inset-0 bg-black opacity-40"></div>
+              <div className="absolute inset-0 bg-black opacity-30"></div>
 
               {/* Contenu textuel et boutons */}
-              <div className="absolute lg:bottom-1/3 lg:left-0  md:left-1/5 bottom-4 z-10 flex flex-col items-center text-center text-white transform md:transform-none -translate-x-1/2">
-                <Image src={game.title} alt={`Title for ${game.id}`} width={450} height={250} className="w-full"/>
+              <div className="absolute md:top-1/3 md:left-0 bottom-0 left-1/2 z-10 flex flex-col items-center text-center text-white transform md:transform-none -translate-x-1/2 md:-translate-x-0" style={{ width: '80%', maxWidth: '600px' }}>
+                <Image src={game.title} alt={`Title for ${game.id}`} width={800} height={350} id='logoTitle' className="w-full max-w-[850px] h-[150px] transition-all duration-300" />
 
-                <p className="-mt-2 text-2xl font-semibold">{game.pitch}</p>
-
-                <div className="mt-4 flex space-x-4">
+                <div className="mt-0 flex space-x-4 md: mb-4">
                   <a href={game.trailer} target="_blank" rel="noopener noreferrer">
-                    <button className="px-4 py-2 border border-white text-white rounded-md hover:bg-white hover:text-black transition">
+                    <button className="px-4 py-2 border border-white bg-white text-black text-sm rounded-md transition-transform duration-200 hover:scale-105">
                       BANDE ANNONCE
                     </button>
                   </a>
-                  <button
-                    onClick={() => handleGameClick(game.id)}
-                    className="px-4 py-2 border border-white text-white rounded-md hover:bg-white hover:text-black transition"
-                  >
+                  <button onClick={() => handleGameClick(game.id)} className="px-4 py-2 border border-white bg-white text-black text-sm rounded-md transition-transform duration-200 hover:scale-105">
                     EN SAVOIR PLUS
                   </button>
                 </div>
@@ -74,6 +79,17 @@ const Wallpaper = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      {/* Style personnalisé pour les points de pagination */}
+      <style jsx global>{`
+        .swiper-pagination-bullet {
+          background: white;
+          opacity: 0.7;
+        }
+        .swiper-pagination-bullet-active {
+          opacity: 1;
+        }
+      `}</style>
     </div>
   );
 };
