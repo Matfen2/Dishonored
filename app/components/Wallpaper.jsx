@@ -30,8 +30,8 @@ const Wallpaper = () => {
     <div className="relative w-full h-screen overflow-hidden">
       {/* Logo en haut à gauche */}
       <Link href="/">
-        <div className="fixed top-4 left-0 z-20" style={{ marginLeft: "-100px", marginTop: "-40px" }}>
-          <Image src="/picts/dishonoredLogo.png" alt="logoDishonored" width={320} height={120} />
+        <div className="fixed top-4 left-0 z-20" style={{ marginLeft: "-72px", marginTop: "-35px" }}>
+          <Image src="/picts/dishonoredLogo.png" alt="logoDishonored" width={320} height={120} style={{ maxWidth: '220px'}} />
         </div>
       </Link>
 
@@ -44,8 +44,8 @@ const Wallpaper = () => {
         }}
         pagination={{
           clickable: true,
-          bulletClass: 'swiper-pagination-bullet', // Class de pagination pour personnalisation
-          bulletActiveClass: 'swiper-pagination-bullet-active', // Class active pour pagination
+          bulletClass: 'swiper-pagination-bullet', 
+          bulletActiveClass: 'swiper-pagination-bullet-active', 
         }}
         modules={[Autoplay, Pagination]}
         className="mySwiper"
@@ -58,19 +58,19 @@ const Wallpaper = () => {
                 backgroundImage: `url(${isMobile ? game.mobile : game.present})`,
               }}
             >
-              <div className="absolute inset-0 bg-black opacity-30"></div>
+              <div className="absolute inset-0 bg-black opacity-20"></div>
 
               {/* Contenu textuel et boutons */}
               <div className="absolute md:top-1/3 md:left-0 bottom-0 left-1/2 z-10 flex flex-col items-center text-center text-white transform md:transform-none -translate-x-1/2 md:-translate-x-0" style={{ width: '80%', maxWidth: '600px' }}>
                 <Image src={game.title} alt={`Title for ${game.id}`} width={800} height={350} id='logoTitle' className="w-full max-w-[850px] h-[150px] transition-all duration-300" />
 
-                <div className="mt-0 flex space-x-4 md: mb-4">
+                <div className="mt-0 flex space-x-4 md: mb-12">
                   <a href={game.trailer} target="_blank" rel="noopener noreferrer">
-                    <button className="px-4 py-2 border border-white bg-white text-black text-sm rounded-md transition-transform duration-200 hover:scale-105">
+                    <button className="px-3 py-2 border border-white bg-white text-black text-sm rounded-md transition-transform duration-200 hover:scale-105" id='btnInfo'>
                       BANDE ANNONCE
                     </button>
                   </a>
-                  <button onClick={() => handleGameClick(game.id)} className="px-4 py-2 border border-white bg-white text-black text-sm rounded-md transition-transform duration-200 hover:scale-105">
+                  <button onClick={() => handleGameClick(game.id)} className="px-3 py-2 border border-white bg-white text-black text-sm rounded-md transition-transform duration-200 hover:scale-105" id='btnInfo'>
                     EN SAVOIR PLUS
                   </button>
                 </div>

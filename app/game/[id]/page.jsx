@@ -31,15 +31,15 @@ const GamePage = () => {
       {/* Section PRESENT */}
       <div className="w-full h-screen bg-cover bg-center relative" style={{ backgroundImage: `url(${game.imgGame})` }}>
         <Link href="/">
-        <div className="fixed top-4 left-0 z-20" style={{ marginLeft: "-100px", marginTop: "-40px" }}>
-          <Image src="/picts/dishonoredLogo.png" alt="logoDishonored" width={320} height={120} />
+        <div className="fixed top-4 left-0 z-20" style={{ marginLeft: "-72px", marginTop: "-35px" }}>
+          <Image src="/picts/dishonoredLogo.png" alt="logoDishonored" width={320} height={120} style={{ maxWidth: '220px'}} />
         </div>
       </Link>
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-4 text-center">
-          <a href={game.gameplay} target="_blank" rel="noopener noreferrer"  className="px-4 py-2 border border-white bg-white text-black text-sm rounded-md transition-transform duration-200 hover:scale-105">
+          <a href={game.gameplay} target="_blank" rel="noopener noreferrer"  className="px-3 py-2 border border-white bg-white text-black text-sm rounded-md transition-transform duration-200 hover:scale-105" id="hrefBuy">
             GAMEPLAY
           </a>
-          <a href="#buy" className="px-4 py-2 border border-white bg-white text-black text-sm rounded-md transition-transform duration-200 hover:scale-105">
+          <a href="#buy" className="px-3 py-2 border border-white bg-white text-black text-sm rounded-md transition-transform duration-200 hover:scale-105" id="hrefBuy">
             ACHETER
           </a>
         </div>
@@ -136,7 +136,7 @@ const GamePage = () => {
 
           {/* Description et Boutons */}
           <div className="flex flex-col max-w-2xl text-center md:text-left px-4 md:px-0">
-            <p className="text-base md:text-lg lg:text-xl -mb-2 md:mb-0">
+            <p className="text-base md:text-lg lg:text-xl -mb-2 md:mb-0" id="synopsis">
               {game.buy.description}
             </p>
             <div className="mt-4 flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 justify-center md:justify-start">

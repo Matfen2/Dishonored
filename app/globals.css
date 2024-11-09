@@ -14,35 +14,74 @@
   }
 }
 
+/* Polices personnalisées */
+@font-face {
+  font-family: ascender;
+  src: url('/fonts/Ascender.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: redRose;
+  src: url('/fonts/RedRose-Bold.ttf');
+  font-display: swap;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* WALLPAPER */
+#btnInfo {
+ font-family: redRose; 
+}
 
-/* GAME */
+/* PRESENT*/
+#hrefBuy {
+  font-family: redRose;
+}
+
+/* JACKET */
+#pitchJacket {
+  font-family: redRose;
+}
+
+#sentenceJacket {
+  letter-spacing: 2px;
+  font-family: ascender;
+}
+
+/* BUY */
+#synopsis {
+  letter-spacing: 2px;
+  font-family: ascender;
+}
+
+#btnPlaystation {
+  font-family: redRose;
+  background-color: darkblue;
+}
+
+#btnXbox {
+  font-family: redRose;
+  background-color: darkgreen;
+}
+
+#btnSteam {
+  font-family: redRose;
+  background-color: rgb(81, 81, 81);
+}
+
+/* Styles responsives */
 @media screen and (max-width: 768px) {
   #logoOutsider {
     height: 140px;
     width: 250px;
     margin-left: 20px;
   }
-}
 
-#btnPlaystation {
-  background-color: darkblue;
-}
-
-#btnXbox {
-  background-color: darkgreen;
-}
-
-#btnSteam {
-  background-color: rgb(81, 81, 81);
-}
-
-@media screen and (max-width: 767px) {
   #mainWallpaper {
     margin-bottom: -40px;
     width: 100%;
@@ -57,21 +96,27 @@ body {
     width: 500px;
   }
 
+  #sentenceJacket {
+    font-size: 0.8em;
+  }
+
   #jacket {
     height: 400px;
     max-width: 350px;
   }
 
-  #btnPlaystation {
+  #btnPlaystation, #btnXbox, #btnSteam {
     font-size: 0.7em;
   }
+}
 
-  #btnXbox {
-    font-size: 0.7em;
+@media screen and (max-width: 767px) {
+  #pitchJacket {
+    font-size: 1.4em;
   }
 
-  #btnSteam {
-    font-size: 0.7em;
+  #sentenceJacket {
+    font-size: 1.0em;
   }
 }
 
@@ -89,27 +134,31 @@ body {
     margin-top: 2px;
     font-size: 0.7em;
   }
-}
 
-@media screen and (max-width: 375px) {
   #pitchJacket {
-    font-size: 0.9em;
+    font-size: 1.2em;
   }
 
   #sentenceJacket {
     font-size: 0.8em;
   }
+
+  #btnPlaystation, #btnXbox, #btnSteam {
+    font-size: 0.9em;
+  }
 }
 
-@media screen and (max-width: 767px) {
-  #mainWallpaper {
-    margin-bottom: -40px;
-    width: 100%;
+@media screen and (max-width: 375px) {
+  #btnInfo {
+    font-size: 0.8em;
   }
 
-  #subWallpaper {
-    width: 100%;
-    max-width: 400px;
+  #pitchJacket {
+    font-size: 1.0em;
+  }
+
+  #sentenceJacket {
+    font-size: 0.8em;
   }
 }
 
@@ -119,4 +168,16 @@ body {
   }
 }
 
+@media screen and (max-width: 320px) {
+  #btnInfo {
+    font-size: 0.6em;
+  }
 
+  #pitchJacket {
+    font-size: 1.0em;
+  }
+
+  #sentenceJacket {
+    font-size: 0.8em;
+  }
+}
