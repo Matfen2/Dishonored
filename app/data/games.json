@@ -1,6 +1,7 @@
 [
   {
     "id": "1",
+    "slug": "dishonored-definitive-edition",
     "present": "/picts/dishonored1/main/dishonoredDefinitiveEditionWallpaper.png",
     "mobile": "/picts/dishonored1/main/dishonoredDefinitiveEditionWallpaperMobile.png",
     "title": "/picts/dishonored1/main/dishonoredDefinitiveEditionLogo.png",
@@ -61,6 +62,7 @@
   },
   {
     "id": "2",
+    "slug": "dishonored-2",
     "present": "/picts/dishonored2/main/dishonored2Wallpaper.jpg",
     "mobile": "/picts/dishonored2/main/dishonored2WallpaperMobile.png",
     "title": "/picts/dishonored2/main/dishonored2Logo.png",
@@ -107,6 +109,7 @@
   },
   {
     "id": "3",
+    "slug": "dishonored-death-of-the-outsider",
     "present": "/picts/dishonoredDeathOfOutsider/main/dishonoredDeathOfOutsiderWallpaper.jpg",
     "mobile": "/picts/dishonoredDeathOfOutsider/main/dishonoredDeathOfOutsiderWallpaperMobile.png",
     "title": "/picts/dishonoredDeathOfOutsider/main/dishonoredDeathOfOutsiderLogo.png",

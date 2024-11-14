@@ -22,8 +22,8 @@ const Wallpaper = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handleGameClick = (id) => {
-    router.push(`/game/${id}`);
+  const handleGameClick = (slug) => {
+    router.push(`/game/${slug}`);
   };
 
   return (
@@ -70,7 +70,7 @@ const Wallpaper = () => {
                       BANDE ANNONCE
                     </button>
                   </a>
-                  <button onClick={() => handleGameClick(game.id)} className="px-3 py-2 border border-white bg-white text-black text-sm rounded-md transition-transform duration-200 hover:scale-105" id='btnInfo'>
+                  <button onClick={() => handleGameClick(game.slug)} className="px-3 py-2 border border-white bg-white text-black text-sm rounded-md transition-transform duration-200 hover:scale-105" id='btnInfo'>
                     EN SAVOIR PLUS
                   </button>
                 </div>
